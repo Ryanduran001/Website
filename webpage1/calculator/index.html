@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<style>
+		input[type=button] {
+			background-color: #4CAF50;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center; 
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Calculator</h1>
+
+	<input type="text" id="result" disabled>
+
+	<br>
+
+	<input type="button" value="1" onclick="addNumber('1')">
+	<input type="button" value="2" onclick="addNumber('2')">
+	<input type="button" value="3" onclick="addNumber('3')">
+	<input type="button" value="+" onclick="setOperation('+')">
+
+	<br>
+
+	<input type="button" value="4" onclick="addNumber('4')">
+	<input type="button" value="5" onclick="addNumber('5')">
+	<input type="button" value="6" onclick="addNumber('6')">
+	<input type="button" value="-" onclick="setOperation('-')">
+
+	<br>
+
+	<input type="button" value="7" onclick="addNumber('7')">
+	<input type="button" value="8" onclick="addNumber('8')">
+	<input type="button" value="9" onclick="addNumber('9')">
+	<input type="button" value="*" onclick="setOperation('*')">
+
+	<br>
+
+	<input type="button" value="0" onclick="addNumber('0')">
+	<input type="button" value="C" onclick="clearCalculator()">
+	<input type="button" value="=" onclick="calculate()">
+
+	<br>
+
+	<script>
+		let num1 = 0;
+		let num2 = 0;
+		let operation = '';
+
+		function addNumber(num) {
+			document.getElementById('result').value += num;
+		}
+
+		function clearCalculator() {
+			document.getElementById('result').value = '';
+			num1 = 0;
+			num2 = 0;
+			operation = '';
+		}
+
+		function setOperation(op) {
+			num1 = parseFloat(document.getElementById('result').value);
+			operation = op;
+			document.getElementById('result').value = '';
+		}
+
+		function calculate() {
+			num2 = parseFloat(document.getElementById('result').value);
+			let result = 0;
+			switch (operation) {
+				case '+':
+					result = num1 + num2;
+					break;
+				case '-':
+					result = num1 - num2;
+					break;
+				case '*':
+					result = num1 * num2;
+					break;
+				case '/':
+					result = num1 / num2;
+					break;
+			}
+			document.getElementById('result').value = result;
+			num1 = 0;
+			num2 = 0;
+			operation = '';
+		}
+	</script>
+
+</body>
+</html>

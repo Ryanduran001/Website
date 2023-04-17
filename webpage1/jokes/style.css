@@ -1,0 +1,33 @@
+
+body {
+    background-color: aqua;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+}
+.container {
+    background-color: #777777;
+    border-radius: 10px;
+    text-align: center;
+    width: 800px;
+}
+.btn {
+    background-color: #777777;
+    border: 0;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+
+}
+
+.joke {
+
+}
+
+.container {
+    background-color: aquamarine;
+    padding: 20px;
+}
