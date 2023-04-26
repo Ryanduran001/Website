@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+body {
+    font-family: 'Caveat', cursive;
+    background-color: aquamarine;
+    color:crimson;
+    margin: 0;
+    overflow: hidden;
+}
+
+#buttons {
+    background-color: darkmagenta;
+    color:coral;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    padding: 20px;
+}
