@@ -14,7 +14,6 @@ body {
 
 .search {
     height: 50px;
-    width: 50px;
     position: relative;
 }
 
@@ -29,6 +28,7 @@ body {
 }
 
 .btn {
+    display: flex;
     background-color: white;
     border: 0;
     cursor: pointer;
@@ -36,6 +36,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    align-items: center;
+    justify-content: center;
     height: 50px;
     width: 50px;
 
@@ -47,7 +49,7 @@ body {
 
 }
 
-.serch.active .btn {
+.search.active .btn {
     transform: translateX(198px);
 }
 
